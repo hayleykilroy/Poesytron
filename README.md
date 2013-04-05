@@ -1,7 +1,7 @@
 Poesytron
 =========
 RStudio project and R scripts for Poesytron 575: a haiku-generating program
-Website: http://poesytron575.blogspot.com/
+Website: http://poesytron575.blogspot.com
 Contact: Hayley Kilroy Poesytron575@gmail.com
 
 Source files from http://www.speech.cs.cmu.edu/cgi-bin/cmudict
