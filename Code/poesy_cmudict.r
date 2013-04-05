@@ -1,13 +1,13 @@
 #load cmudict
-cmutxt.1=read.delim("Source/cmudict.trim.txt", sep="\t", as.is=T, header=F)
-cmutxt=cmutxt.1
+cmutxt=read.delim("Source/cmudict.trim.txt", sep="\t", as.is=T, header=F)
+cmutxt=data.frame(cmutxt)
 #phonemes
 #ph=read.table("Source/cmudict.phones.txt")
 
-#exclude alternates
-cmutxt=cmutxt[which(grepl("[(]",cmutxt$V1)==F),]
 #extract word
 cmutxt$wrd=sub("[ ].*$","",cmutxt$V1)
+#exclude alternates
+cmutxt=cmutxt[which(grepl("[(]",cmutxt$V1)==F),]
 #extract phonemes
 cmutxt$ph=sub("^.*[ ]","",cmutxt$V1)
 #count syllables by counting numeric (0-9) characters which indicate a stressed phoneme
